@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <link href='https://fonts.googleapis.com/css?family=Chivo:900' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <title>BBSuite by alexisvincent</title>
+  </head>
+
+  <body>
+    <div id="container">
+      <div class="inner">
+
+        <header>
+          <h1>BBSuite</h1>
+          <h2>Blue Ballot Voting System</h2>
+        </header>
+
+        <section id="downloads" class="clearfix">
+          <a href="https://github.com/alexisvincent/BBSuite/zipball/master" id="download-zip" class="button"><span>Download .zip</span></a>
+          <a href="https://github.com/alexisvincent/BBSuite/tarball/master" id="download-tar-gz" class="button"><span>Download .tar.gz</span></a>
+          <a href="https://github.com/alexisvincent/BBSuite" id="view-on-github" class="button"><span>View on GitHub</span></a>
+        </section>
+
+        <hr>
+
+        <section id="main_content">
+          <h1>
+<a name="welcome" class="anchor" href="#welcome"><span class="octicon octicon-link"></span></a>Welcome!</h1>
+
+<p><em>You have stumbled across the home of the Blue Ballot Voting System</em></p>
+
+<hr><h3>
+<a name="about" class="anchor" href="#about"><span class="octicon octicon-link"></span></a>About</h3>
+
+<p>This was a high school project of mine, where we were required to make some sort of voting system... and Blue Ballot was my solution. Blue Ballot or BB for short (as it will now be called in the rest of this document), is a suite of 4 applications, written completely in Java, designed to manage and facilitate a voting process. Whether this might be for a school council, company board, local municipality or anything really. When I designed it I had local municipal elections in mind (however I doubt very much that this is an appropriate use, due to lack of testing) and it is for this reason that the system uses 2 sets of passwords (Governmental and United Nations).</p>
+
+<hr><h3>
+<a name="get-it-here-" class="anchor" href="#get-it-here-"><span class="octicon octicon-link"></span></a>Get It Here :)</h3>
+
+<h4>
+<a name="source-code" class="anchor" href="#source-code"><span class="octicon octicon-link"></span></a>Source Code</h4>
+
+<p>Note: You will then need to init the submodules of the individual apps and the library (which is needed by every application). </p>
+
+<p>You can get the source code from github or download it as a tar.gz or a .zip
+Alternatively clone repository directly</p>
+
+<p><code>git clone https://github.com/alexisvincent/BBSuite.git BBSuite &amp;&amp; cd BBSuite</code>
+<code>git submodule init &amp;&amp; git submodule update</code></p>
+
+<hr><h4>
+<a name="distributables" class="anchor" href="#distributables"><span class="octicon octicon-link"></span></a>Distributables</h4>
+
+<h5>
+<a name="java-binaries-requires-java-jre-17-or-later" class="anchor" href="#java-binaries-requires-java-jre-17-or-later"><span class="octicon octicon-link"></span></a>Java Binaries (requires Java JRE 1.7 or later)</h5>
+
+<p>These are the latest binaries (if you want old versions please checkout that version on git and compile yourself).</p>
+
+<h6>
+<a name="blue-ballot-registration-app" class="anchor" href="#blue-ballot-registration-app"><span class="octicon octicon-link"></span></a><a href="https://www.dropbox.com/s/0dhzuuea7tne1fa/RegistrationApp.jar">Blue Ballot Registration App</a>
+</h6>
+
+<h6>
+<a name="blue-ballot-voting-app---not-yet-released" class="anchor" href="#blue-ballot-voting-app---not-yet-released"><span class="octicon octicon-link"></span></a>Blue Ballot Voting App -&gt; Not yet released</h6>
+
+<h6>
+<a name="blue-ballot-server-app" class="anchor" href="#blue-ballot-server-app"><span class="octicon octicon-link"></span></a><a href="https://www.dropbox.com/s/ivuaj6m0kxe4tit/ServerApp.jar">Blue Ballot Server App</a>
+</h6>
+
+<h6>
+<a name="blue-ballot-admin-app---not-yet-released" class="anchor" href="#blue-ballot-admin-app---not-yet-released"><span class="octicon octicon-link"></span></a>Blue Ballot Admin App -&gt; Not yet released</h6>
+
+<h6>
+<a name="blue-ballot-library" class="anchor" href="#blue-ballot-library"><span class="octicon octicon-link"></span></a><a href="https://www.dropbox.com/s/g9gych10y1lhtpt/BBLibrary.jar">Blue Ballot Library</a>
+</h6>
+
+<hr><h5>
+<a name="platform-specific-releases" class="anchor" href="#platform-specific-releases"><span class="octicon octicon-link"></span></a>Platform Specific Releases</h5>
+
+<p>If you want platform specific releases then you will have to compile them yourself. This is done using the ant build script provided. There are individual ones for each app as well as a global one for the suite.</p>
+
+<p>Note: To compile you will need to have the <em>BBLibrary.jar</em> file in <em>/dist/lib</em> if its not already there. As well as the <em>BBLibrary.jar</em> file you will need the libs required to build the platform specific executables. Look in <em>build.xml</em> for more information about where to get these.</p>
+
+<p>When making platform specific releases and you want the <strong>Java Runtime Environment</strong> to be bundled with the app you must specify where that JRE is. To do this edit build.xml to point to the correct place. For example:</p>
+
+<p><code>&lt;property name="myApp.jre" value="/Library/Java/JavaVirtualMachines/jdk1.7.0_12.jdk/Contents/Home"/&gt;</code></p>
+
+<p>Alternatively if you do not wish to bundle the JRE then comment out any lines containing
+<code>&lt;runtime dir="${myApp.jre}" /&gt;</code></p>
+
+<p>If you have <strong>netbeans</strong> then it will be really easy for you as each app as well as the library is a netbeans project. Just open them in netbeans, open the file tab, then right click the build.xml file choose run targets -&gt; other targets -&gt; the platform you want (eg. mac). This will compile to distributables. Note: At the moment the netbeans project has the BBLibrary netbeans project as a dependancy. Feel free to remove this if you have the BBLibrary.jar file in /dist/lib</p>
+
+<p>To build without netbeans (requires ant)
+<code>cd /Project/Root/</code>
+<code>ant &lt;yourplatform&gt;</code>
+where  is mac or windows</p>
+
+<hr><h3>
+<a name="licence" class="anchor" href="#licence"><span class="octicon octicon-link"></span></a>Licence</h3>
+
+<p>This project is licences under a <a href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution Licence</a></p>
+
+<p>In basic terms, you are free to use, change and distribute this project, including commercially under the following conditions. That appropriate reference is attributed to the original creator, whether that be me or anyone I have myself used stuff from.</p>
+
+<hr><h3>
+<a name="project-breakdown" class="anchor" href="#project-breakdown"><span class="octicon octicon-link"></span></a>Project Breakdown</h3>
+
+<h4>
+<a name="blue-ballot-registration-app-1" class="anchor" href="#blue-ballot-registration-app-1"><span class="octicon octicon-link"></span></a>Blue Ballot Registration App</h4>
+
+<p>Provides voters with a unique key that they can use to cast their virtual ballot.</p>
+
+<h4>
+<a name="blue-ballot-voting-app" class="anchor" href="#blue-ballot-voting-app"><span class="octicon octicon-link"></span></a>Blue Ballot Voting App</h4>
+
+<p>Allows voters to vote over the air. It also provides news, updates, candidate information and various other features to the voter.</p>
+
+<h4>
+<a name="blue-ballot-server-app-1" class="anchor" href="#blue-ballot-server-app-1"><span class="octicon octicon-link"></span></a>Blue Ballot Server App</h4>
+
+<p>Used to control the server service/daemon. The server accepts connections, ballots, requests, etc. as well as serves information to the other apps such as news, updates, candidate information etc. This is the central hub that all the other apps connect to.</p>
+
+<h4>
+<a name="blue-ballot-admin-app" class="anchor" href="#blue-ballot-admin-app"><span class="octicon octicon-link"></span></a>Blue Ballot Admin App</h4>
+
+<p>Allows the election admin to setup and manage the election process. It connects to the various servers and allows the admin to control each election separately.</p>
+
+<h4>
+<a name="blue-ballot-library-1" class="anchor" href="#blue-ballot-library-1"><span class="octicon octicon-link"></span></a>Blue Ballot Library</h4>
+
+<p>The lib for the other apps. Needed for compile purposes ONLY. Note that this is not a standalone part of the suite.</p>
+        </section>
+
+        <footer>
+          BBSuite is maintained by <a href="https://github.com/alexisvincent">alexisvincent</a><br>
+          This page was generated by <a href="http://pages.github.com">GitHub Pages</a>. Tactile theme by <a href="http://twitter.com/jasonlong">Jason Long</a>.
+        </footer>
+
+        
+      </div>
+    </div>
+  </body>
+</html>
