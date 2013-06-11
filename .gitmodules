@@ -1,0 +1,9 @@
+[submodule "BBRegistrationApp"]
+	path = BBRegistrationApp
+	url = https://github.com/alexisvincent/BBRegistrationApp.git
+[submodule "BBServerApp"]
+	path = BBServerApp
+	url = https://github.com/alexisvincent/BBServerApp.git
+[submodule "BBLibrary"]
+	path = BBLibrary
+	url = https://github.com/alexisvincent/BBLibrary.git
