@@ -7,3 +7,6 @@
 [submodule "BBLibrary"]
 	path = BBLibrary
 	url = https://github.com/alexisvincent/BBLibrary.git
+[submodule "BBVotingApp"]
+	path = BBVotingApp
+	url = https://github.com/alexisvincent/BBVotingApp.git
